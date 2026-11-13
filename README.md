@@ -2,6 +2,10 @@
 
 This repository is used for the CI/CD module of the Full Stack Open course
 
+## Link app Fly.io
+
+<https://fs-pokedex-vivid-coastline-6851.fly.dev>
+
 ## Commands
 
 Start by running `npm install` inside the project folder
