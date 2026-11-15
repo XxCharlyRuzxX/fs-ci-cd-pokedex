@@ -137,7 +137,11 @@ jobs:
                 ]
               }]
             }')
-
+          if [[ ! "$DISCORD_WEBHOOK" =~ ^https:// ]]; then
+            echo "DISCORD_WEBHOOK no contiene una URL HTTPS válida"
+            exit 1
+          fi
+          echo "DISCORD_WEBHOOK tiene formato HTTPS"
           curl --fail-with-body --silent --show-error \
             -X POST "$DISCORD_WEBHOOK" \
             -H "Content-Type: application/json" \
